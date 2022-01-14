@@ -1,0 +1,27 @@
+
+import {Component} from'@angular/core';
+
+
+@Component ({
+    selector:'app-heroe',
+    templateUrl:'heroe.component.html'
+})
+export class HeroeComponent{
+  name:string = 'Iron Man';
+  age:number = 45;
+
+  getName = ():string =>{
+    return `${this.name} - ${this.age}`
+  }
+  get capitalizeName ():string{
+      return `${this.name.toUpperCase()}` 
+  }
+
+  updateName ():void{
+   this.name = 'Spiderman';
+  }
+  updateAge ():void{
+    this.age = 39;
+  }
+
+}
